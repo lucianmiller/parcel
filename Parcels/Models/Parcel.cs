@@ -10,11 +10,12 @@ namespace Parcels.Models
     public float UserWeight { get; set; }
     public float UserVolume { get; set; }
 
-    public Parcel(float length, float width, float height)
+    public Parcel(float length, float width, float height, float weight)
     {
       UserLength = length;
       UserWidth = width;
       UserHeight = height;
+      UserWeight = weight;
     }
 
     public void Volume()
