@@ -7,6 +7,7 @@ namespace Parcels.Models
     public float UserLength { get; set; }
     public float UserWidth { get; set; }
     public float UserHeight { get; set; }
+    public float UserWeight { get; set; }
     public float UserVolume { get; set; }
 
     public Parcel(float length, float width, float height)
