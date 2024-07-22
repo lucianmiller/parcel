@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace Parcels.Models
 {
@@ -9,6 +10,7 @@ namespace Parcels.Models
     public float UserHeight { get; set; }
     public float UserWeight { get; set; }
     public float UserVolume { get; set; }
+    public float UserPrice { get; set; }
 
     public Parcel(float length, float width, float height, float weight)
     {
@@ -21,6 +23,12 @@ namespace Parcels.Models
     public void Volume()
     {
       UserVolume = UserLength * UserHeight * UserWidth;
+    }
+
+    public void CostToShip()
+    {
+      double price = UserVolume * (UserWeight * 1.50);
+      UserPrice = (float)Math.Round(price,2);
     }
   }
 }

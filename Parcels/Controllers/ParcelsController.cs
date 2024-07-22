@@ -12,9 +12,10 @@ namespace Parcels.Controllers
       float l = float.Parse(length);
       float wi = float.Parse(width);
       float h = float.Parse(height);
-      float we = float.Parse(weight)
+      float we = float.Parse(weight);
       Parcel newParcel = new Parcel (l, wi, h, we);
       newParcel.Volume();
+      newParcel.CostToShip();
       return View(newParcel);
     }
   }
